@@ -9,6 +9,7 @@
 
 body {
     overflow-x: hidden;
+    align-items: center;
 }
 
 header {
@@ -19,18 +20,39 @@ header {
     height: 95vh;
     background-color: pink;
     border-radius: 10px;
-    background-image: url('imgs/daisy.png');
-    background-size: 400px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.07),
+        rgba(0,0,0,0.07)
+    )
+    ,url('imgs/fondo.png');
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-origin: content-box;
     font-family: 'Satoshi-Medium';
-    font-size: 40px;
+    font-size: 50px;
     color: white;
 }
 
-.nombre {
-    font-style: italic;
+::-webkit-scrollbar{
+	width: 10px;
+}
+
+::-webkit-scrollbar-track-piece{
+	background-color: #FFF;
+}
+
+::-webkit-scrollbar-thumb{
+	background-color: #CBCBCB;
+	outline: 2px solid #FFF;
+	outline-offset: -2px;
+	border: .1px solid #B7B7B7;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+	background-color: #909090;
 }
 
 .firma {
@@ -46,6 +68,7 @@ header {
     align-items: center;
     padding: 3rem;
     white-space: pre-line;
+    letter-spacing: 0.2px;
     border-radius: 10px;
     max-height: 80vh;
 }
@@ -142,21 +165,6 @@ h2 {
     }
 }
 
-.yulyart {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    width: 98vw;
-    margin-top: 2rem;
-    border-radius: 10px;
-    background-color: #39ac63;
-    font-family: Montserrat;
-    font-size: 12px;
-    color: aliceblue;
-}
-
 .loveLetters {
     display: flex;
     flex-direction: column;
@@ -203,14 +211,15 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 98vh;
     width: 98vw;
     margin-top: 2rem;
     border-radius: 10px;
-    background-color: black;
-    font-family: Montserrat;
-    font-size: 12px;
-    color: yellow;
+    background-image: url(imgs/fondoblack.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: content-box;
 }
 
 .fin {
@@ -218,7 +227,21 @@ h2 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
-    font-family: 'Satoshi-Medium';;
+    font-family: 'Satoshi-Medium';
     font-size: 10px;
+}
+
+video {
+    border-radius: 10px;
+}
+
+.nombref {
+    font-weight: 200;
+    font-family: 'Satoshi', cursive;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    color: white;
+    background-image: url(imgs/Gradiente.png);
+    border-radius: 5px;
 }
